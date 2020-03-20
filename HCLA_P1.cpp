@@ -230,6 +230,73 @@ void calificaciones(void)
 
 
 
+void CalificacionArbol(void)
+{
+	
+    int calf_1, calf_2, calf_3;
+	float prom;
+	
+   system ("cls");
+		printf(" ***************** Promedio de alumno (Arbol)******************* \n\n");
+		
+		  printf("Ingrese la primera calificacion: ");
+		   scanf("%d", &calf_1);
+		  
+		  printf("\nIngrese la segunda calificacion: ");
+		   scanf("%d", &calf_2);
+		  
+		  printf("\nIngrese la tercera calificacion: ");
+		   scanf("%d", &calf_3);
+		   
+		   prom = (calf_1+calf_2+calf_3)/3;
+  
+  if(prom<80) //parte de 80
+    {
+        if(prom<60) 
+         {
+           if(prom<30)
+           {
+            printf(" Lo sentimos tendras que \"Repetir\"\n");
+            }
+            else
+			 {
+			   printf("Lo sentimos tendras realizar \"Extraordinario\" \n");
+				}  
+            }
+             else if(prom<70) //bloque de 60 y menor a 79
+               {
+             	printf("Sigue mejorando has sido \"Suficiente\" \n");
+                 }
+                 else
+		          {
+				    printf("Sigue mejorando has sido \"Regular\" \n");
+			       }
+		  }
+		 
+			else if(prom<96) //parte de 96
+			{
+				if(prom<90) //80 y menor que 98
+				{
+					printf("Felicidades has salido \"Bien\" \n");
+				}
+				else{
+					printf("Felicidades has salido \"Muy bien\" \n");
+				}
+	 	      }
+				else if(prom<=100) 
+				 {
+					printf("Genial has salido \"Excelente\" sigue asi.\n\n");
+				  }
+				   else
+				   {
+				  	printf("A ocurrido un ERROR, verifique sus calificaciones...\n\n");
+				   }
+
+	system("pause");
+}
+//**************************************************************************************
+
+
 
 
 
