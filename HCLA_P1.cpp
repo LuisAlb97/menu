@@ -170,6 +170,68 @@ void llamada(void)
 
 
 
+void calificaciones(void)
+{
+	int calf1, calf2, calf3;
+	float prom;
+	
+	
+   system ("cls");
+		printf("********************* Promedio de alumno ************************ \n\n");
+		
+		  printf("Ingrese la primera calificacion: ");
+		   scanf("%d", &calf1);
+		  
+		  printf("\nIngrese la segunda calificacion: ");
+		   scanf("%d", &calf2);
+		  
+		  printf("\nIngrese la tercera calificacion: ");
+		   scanf("%d", &calf3);
+		  printf("\n");
+		   prom = (calf1+calf2+calf3)/3;
+
+
+	 if(prom<30)
+	   {
+       	 printf(" Lo sentimos tendras que \"Repetir\"\n");
+       }
+        else if(prom<60)
+		{
+        	printf("Lo sentimos tendras realizar \"Extraordinario\" \n");
+        }
+         else if(prom<70)
+         {
+         	printf("Sigue mejorando has sido \"Suficiente\" \n");
+         }
+          else if(prom<80)
+          {
+          	printf("Sigue mejorando has sido \"Regular\" \n");
+          }
+           else if(prom<90)
+           {
+           	 printf("Felicidades has salido \"Bien\" \n");
+           }
+            else if(prom<98)
+            {
+              printf("Felicidades has salido \"Muy bien\" \n");
+            }
+             else if(prom<=100)
+             {
+             	printf("Genial has salido \"Excelente\" sigue asi.\n\n");
+             }
+             else if(prom>100)
+             {
+             	printf("A ocurrido un ERROR, verifique sus calificaciones...\n\n");
+			 }
+
+	system("pause");
+}
+//**************************************************************************************
+
+
+
+
+
 
 
 
