@@ -298,6 +298,70 @@ void CalificacionArbol(void)
 
 
 
+void Agua(void)
+{
+        system ("cls");
+     	int m3=0, op;
+		float subt=0, total=0, iva=0;
+	do
+	{
+		 system("cls");
+		 printf("*************Registro de Agua *****************\n\n");
+		 printf("Cantidad de agua que ha consumido: ");
+		  scanf("%d", &m3);
+		  printf("\n");
+		
+		  if(m3>=0 && m3<=4)
+		   {
+		   	  subt = 50;
+		   	  printf("Subtotal: $%.2f\n", subt);
+		   	  
+		   	    iva = (subt*0.08);
+		   	    printf("IVA (8%): $%.2f\n", iva);
+    	   	      
+		   	    total = subt+iva;
+		   	    printf("Total: $%.2f \n", total);
+		       }
+		   
+		     else if(m3>=5 && m3<=15)
+		      {  	
+		      	 subt = m3*8;
+		      	 printf("Subtotal: $%.2f\n", subt);
+		      	 iva = (subt*0.08);
+		         printf("IVA (8%): $%.2f\n", iva);
+		      	 total = subt+iva;
+		   	     printf("Total: $%.2f \n", total);           
+			     } 
+			   
+			    else if(m3>=16 && m3<=50)
+		         {  	
+		      	        subt = m3*10;
+		      	        printf("Subtotal: $%.2f\n", subt);
+						iva = (subt*0.08);
+		      	        printf("IVA (8%): $%.2f\n", iva);  
+						total = subt+iva;
+		   	            printf("Total: $%.2f \n\n", total);           
+			          } 
+			        
+					else if(m3>=51)
+		              {  	
+		              	subt = m3*11;
+		      	        printf("Subtotal: $%.2f\n", subt);		      	          
+						iva = (subt*0.08);
+		      	        printf("IVA (8%): $%.2f\n", iva);		      	            
+						total = subt+iva;
+		   	            printf("Total: $%.2f \n\n", total);           
+			              }
+				printf(" Ingrese \"1\" para salir, cualquier otro valor para seguir: \n");
+				 scanf("%d", &op);
+				 
+			}while(op != 1);
+  system("pause");	
+}
+//**************************************************************************************
+
+
+
 
 
 
