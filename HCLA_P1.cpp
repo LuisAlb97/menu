@@ -362,6 +362,71 @@ void Agua(void)
 
 
 
+void Salario(void)
+{
+            system ("cls");
+            int hora_s;
+	        float salario_h=0, salario_n=0, salario_ex=0, salario_t=0;
+
+		    system("cls"); 	 
+			printf("******************* Salario Personal *****************\n\n");
+			printf("Horas trabajadas (semanalmente): ");
+  			scanf("%d", &hora_s);
+			printf("Ingrese el salario por hora:");
+			scanf("%f", &salario_h);
+			printf("\n");
+			 
+		if((hora_s && salario_h)!= NULL)
+		{
+		
+			 if(hora_s <= 40)
+			 {
+			 	
+			 	printf("Horas Trabajadas: %d\n", hora_s);
+			 	printf("Salario por hora: %.2f\n\n", salario_h);
+			 	
+			 	  salario_n = (hora_s)*salario_h;
+			 	  printf("Salario normal: %.2f\n\n", salario_n);
+			 	  printf("---------------------\n");
+			 	  printf("Salario por trabajar tiempo extra:\n");
+			      printf("Salario Extra: %.2f\n\n", salario_ex);
+			      salario_t = salario_n;
+			      printf("---------------------\n");
+			      printf("Pago total de salario normal y tiempo extra:\n");
+			 	  printf("Salario Total: %.2f\n", salario_t);
+		      }
+		       else
+		        {	
+		        	printf("\n\n---------------------");
+			       	printf("\n Horas Trabajadas: %d", hora_s);
+			     	printf("\n Salario por hora: %.2f", salario_h);
+			 	      salario_n = (hora_s)*salario_h;
+			          printf("\n Salario normal: %.2f", salario_n);
+					   if(hora_s >=41 && hora_s<=49)
+			 	      {
+			        	salario_ex = ((hora_s-40)*2*salario_h);
+			     	    printf("\n Salario Extra: %.2f", salario_ex);	 
+				           printf("\n\n---------------------");
+			    	       salario_t = salario_n+salario_ex;
+			     	       printf("\n Salario Total: %.2f\n", salario_t);
+			         	}
+			     	      else if(hora_s >=50)
+			     	      {
+			        	     salario_ex = ((hora_s-40)*3*salario_h);
+			     	          printf("\n Salario Extra: %.2f", salario_ex);	 
+				               printf("\n\n---------------------");
+			    	             salario_t = salario_n+salario_ex;
+			     	             printf("\n Salario Total: %.2f\n", salario_t);
+						     }
+				   }
+		 }
+		  else
+		   {
+		   	printf("\"ERROR\" Porfavor ingrese digitos validos...\n");
+		   }
+	   
+   system("pause");
+}
 
 
 
